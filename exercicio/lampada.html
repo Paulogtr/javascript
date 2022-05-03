@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamapada</title>
+    <style>
+        img {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando se a lampanda esta queimada</h1>
+    <img src="imagens/lampadaapagada.png" alt="lampada" id="lampada" onmousemove="acender()" onmouseout="apagar()">
+
+    <script>
+        function acender(){
+         document.getElementById('lampada').src ="imagens/lampadaacesa.png"   
+        }
+        function apagar(){
+            document.getElementById("lampada").src="imagens/lampadaapagada.png"
+        }
+    </script>
+</body>
+</html>
