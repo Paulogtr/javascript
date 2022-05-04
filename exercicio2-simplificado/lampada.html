@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamapada</title>
+    <style>
+        img {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando se a lampanda esta queimada</h1>
+    <img src="imagens/lampadaapagada.png" alt="lampada" id="lampada" onmousemove="mudaLampada(1)" onmouseout="mudaLampada()">
+
+    <script>
+        function mudaLampada(tipo){
+            if (tipo == 1){
+         arquivo ="imagens/lampadaacesa.png" 
+            }  else {
+         arquivo ="imagens/lampadaapagada.png"
+            }
+            document.getElementById('lampada').src = arquivo
+    }
+    </script>
+</body>
+</html>
