@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        body{
+            background-color: rgb(16, 126, 126);
+        }
+        h3{
+            text-align: center;
+            background-color: black;
+            padding: 10px;
+            color: yellow;
+        }
+        #f_nome {
+            margin-bottom: 10px;
+            
+        }
+        #f_sobrenome{
+            margin-bottom: 10px;
+        }
+        #res{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Somatória de dois números inteiros</h3>
+
+    
+    <script>
+        /*Objetivo: Desenvolver um programa em JS que faça a leitura de 2 números inteiros e apresente o resultado da soma entre eles.*/
+
+        /*Definição de variaveis*/
+        var js_n1
+        var js_n2
+        var js_soma
+
+        /*Entrada de dados*/
+        js_n1 = window.prompt('Informe o primeiro número: ', 'Digite aqui!')
+        js_n2 = window.prompt('Digite o segundo número: ', 'Digite aqui!')
+
+        /*Processamento de dados*/
+        js_soma = Number(js_n1) + Number(js_n2)
+
+        /*Saída de dados*/
+        document.write(`O resultado da soma é ${js_soma}`)
+    </script>
+</body>
+</html>

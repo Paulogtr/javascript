@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        body{
+            background-color: rgb(16, 126, 126);
+        }
+        h3{
+            text-align: center;
+            background-color: black;
+            padding: 10px;
+            color: yellow;
+        }
+        #res{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Somatória de dois números inteiros</h3>
+    
+    <!--Definição do formulario-->
+    <form name="FormSoma"action="" method="post">
+        Digite o primeiro número: <input type="number" name="n1" id="n1"> <br>
+        Digite o segundo número: <input type="number" name="n2" id="n2"><br>
+        <input type="button" value="Somar" onclick="somar()">
+        
+        <p>
+            <div id="resultado">O resultado da soma é: </div>
+        </p>
+    </form>
+    
+    <script>
+        /*Objetivo: Desenvolver um programa em JS que faça a leitura de 2 números inteiros e apresente o resultado da soma entre eles.*/
+
+        /*Definição de variaveis*/
+        var js_n1
+        var js_n2
+        var js_soma
+        var res
+
+        function somar() {
+            js_n1 = window.document.getElementById('n1')
+            js_n2 = window.document.getElementById('n2')
+            value = Number()
+            res = document.getElementById('resultado')
+            
+            /*Processamento de dados*/
+            js_soma = Number(js_n1.value) + Number(js_n2.value)
+
+             /*Saída de dados*/
+             res.innerHTML += `A soma entre os valores ${n1.value} e ${n2.value} é ${js_soma}`
+        }
+
+        
+        
+
+       
+     
+    </script>
+</body>
+</html>

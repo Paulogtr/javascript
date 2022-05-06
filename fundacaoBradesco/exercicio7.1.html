@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Salario</title>
+    <style>
+        body{
+            background-color: rgb(21, 145, 145);
+        }
+        h1{
+            background-color: black;
+            color: yellow;
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        main{
+            margin-top: 0px;
+            background-color: white;
+            width: 900px;
+            margin: auto;
+            box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.342);
+        }
+        form{
+            background-color: white;
+            padding: 10px;
+            margin: auto;
+        }
+        #vht{
+            margin-left: 69px ;
+            margin-top: 10px;
+        }
+        #inss{
+            margin-left: 26px;
+            margin-top: 10px;
+        }
+        #consulta{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Demonstrativo Para Calculo do Salario Liquido</h1>
+<main>
+    
+        <form name="FormSalario" action="" method="post">
+            Informe a quantidade de horas trabalhadas (135 a 180): <input type="number" name="qht" id="qht"> <br>
+            Informe o valor de hora trabalhada (25 a 50):<input type="number" name="vht" id="vht"> <br>
+            Informe o Percentual de desconto do INSS (5 a 15):<input type="number" name="inss" id="inss">
+            <p><input type="button" value="Calcular" onclick="calcular()"></p>
+    
+        </form>
+
+        <div id="consulta">
+            Consultando Salario Liquido...
+        </div>
+
+        
+</main>
+<footer>
+
+</footer>
+
+    <script>
+        var qht 
+        var vht
+        var inss
+        var sal_liqui
+        var tdesconto
+        var sal_brut
+        var resultado
+
+        function calcular(){
+            //Entrada de dados
+            qht = document.getElementById('qht')
+            vht = document.getElementById('vht')
+            inss = document.getElementById('inss')
+            resultado = document.getElementById('consulta')
+
+            //Processamento de dados
+            var sal_brut = Number(qht.value) * Number(vht.value)
+            var tdesconto = Number(inss.value/100) * Number(sal_brut.value)
+            var sal_liqui = Number(sal_brut.value) - Number(tdesconto.value)
+
+            //Saída de dados com consistencia de valores 
+            resultado.innerHTML = ('<p><strong>DEMONSTRATIVO PARA CALCULO DO SALARIO LIQUIDO</strong></p>')
+            
+            resultado.innerHTML +=('<p>Quantidade de horas trabalhadas (135 a 180) => <strong>' + qht.value + '</strong> <br>')
+                if((qht.value) > 180){
+                 resultado.innerHTML +=('<p><strong>valor maximo execido </br></strong>')
+                }if((qht.value) < 135) {
+                 resultado.innerHTML +=('<p><strong>Valor minimo invalido</strong>')
+                }
+                 resultado.innerHTML += ('<p> Valor da hora trabalhada (25 a 50) => <strong>' + vht.value +'</strong>')
+                    if((vht.value) > 50){
+                 resultado.innerHTML +=('<p><strong>valor maximo execido </br></strong>')
+                }   if((vht.value) < 25) {
+                 resultado.innerHTML +=('<p><strong>Valor minimo invalido</strong>')
+                }
+                 resultado.innerHTML += ('<p> Percentual de desconto INSS => <strong>' + inss.value + '</strong>')
+                    if((inss.value) > 15){
+                 resultado.innerHTML +=('<p><strong>valor maximo execido </br></strong>')
+                }if((inss.value) < 5) {
+                 resultado.innerHTML +=('<p><strong>Valor minimo invalido</strong>')
+                }
+
+            resultado.innerHTML +=(`<p>Salario bruto = ${(sal_brut)}`)
+            
+            resultado.innerHTML +=(`Total de desconto = `  )
+
+            resultado.innerHTML +=(`<p>Salario Liquido = `)
+            
+                /*Saída de dados com Aninhamento de if*/
+            if(sal_liqui > 10500){
+             resultado.innerHTML +=('...(salario elevado! maior que 10.500)')
+            }else if (sal_liqui > 6000){
+             resultado.innerHTML +=('...(Salario Satisfatorio! maior que 6.000)')
+            } else if(sal_liqui > 3000){
+             resultado.innerHTML +=('...(Salario moderado! maior que 3.000)')
+            } else{
+             resultado.innerHTML +=('...(Salario insatisfatorio menor ou igual a 3.000)')
+            
+    }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    
+
+    <script>
+        /*Objetivo: ler dois valores, independetemente da ordem em que foram digitados, e apresenta-los em ordem crescente.
+        Será necessario efetuar a troca de valores, por isso recomendamos definir uma terceira variavel*/
+
+        /*definição das variaveis*/
+        var js_n1
+        var js_n2
+        var js_n3
+
+        /*Entrada de dados*/
+        js_n1 = parseInt(window.prompt('Informe o valor do primeiro número:', '00'))
+        js_n2 = parseInt(window.prompt('Informe o valor do segundo número: ', '00'))
+
+        /*Saída de dados sem classificação*/
+        document.write('número 1 digitado = ' + js_n1 + '</br>')
+        document.write('número 2 digitado = ' + js_n2)
+
+        /*Saída de dados com classificação por decisão condicional simples (if) */
+        if(js_n1 > js_n2){
+            js_n3 = js_n1
+            js_n1 = js_n2
+            js_n2 = js_n3
+        }
+        document.write('<p><strong>Classificação em ordem crescente:</strong></p> ' +js_n1 + ' e ' + js_n2)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <style>
+        body{
+            background-color: rgb(16, 126, 126);
+        }
+        h3{
+            text-align: center;
+            background-color: black;
+            padding: 10px;
+            color: yellow;
+        }
+        #f_nome {
+            margin-bottom: 10px;
+            
+        }
+        #f_sobrenome{
+            margin-bottom: 10px;
+        }
+        #res{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+   
+    <h3>Programa de Boas vindas com Concatenação de campos!</h3> 
+    
+    <!--Definição de Formulario-->
+    <form name = "FormConcatena" action="" method="post">
+        Digite o nome...........: <input type="text" name="f_nome" id="f_nome"> <br>
+        Digite o sobrenome..: <input type="text" name="f_sobrenome" id="f_sobrenome"><br>
+        <input type="button" name="btn_concatena"value="Concatenar" onclick="concatena()">
+        <input type="button" name="btn_cancela"value="Cancelar" >
+    </form>
+    <div id="res">Seu nome completo é: </div>
+    <!--Definição do código JavaScript-->
+    <script>
+        /*Objetivo: Capturar o nome e sobrenome do usuário, concatenar (juntar) os campos e apresentar uma saudação personalizada
+        Elementos de Entrada: método form do oobjeto document
+        Elementos de Saída: método alert do objeto window*/
+
+        /*Definição das variaveis*/
+        var js_name
+        var js_sobrenome
+        var js_nomecompleto
+        var res
+
+
+        function concatena(){
+            /*Entrada dos dados*/
+         js_name = document.FormConcatena.f_nome.value
+         js_sobrenome = document.FormConcatena.f_sobrenome.value
+         
+         /*Processamento de Dados*/
+         js_nomecompleto = js_name + ' ' + js_sobrenome
+
+         /*saída de dados*/
+         window.alert('olá ' + js_nomecompleto)
+         res = document.getElementById('res')
+         res.innerHTML += js_nomecompleto
+        }
+    </script>
+</body>
+</html>
