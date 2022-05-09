@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função em JS</title>
+</head>
+<body>
+    <div id="teste" onmousemove="adicionaTexto()" onmouseover="viraVermelho()" onmouseout="viraAzul()" style="margin:auto auto; background-color: aqua; width: 80%; height: 200px;"></div>
+
+    <script>
+
+ 
+        function viraVermelho(){
+           let div = document.getElementById("teste")
+           div.style.backgroundColor ="red"   
+        }
+        function viraAzul(){
+            let divAzul = document.getElementById("teste")
+            divAzul.style.backgroundColor ="aqua"
+        }
+        function adicionaTexto(){
+            let texto = document.getElementById("teste")
+            texto.innerHTML = ('O mouse moveu ')
+        }
+    </script>
+</body>
+</html>
