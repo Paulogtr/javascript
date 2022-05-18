@@ -12,4 +12,10 @@ let notebook = {
     cor:'Branco',
     tela:' 15 polegadas',
 }
-console.log(notebook)
+console.log(notebook) 
+
+
+
+
+
+

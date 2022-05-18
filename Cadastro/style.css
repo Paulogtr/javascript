@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container_global{
+    height: 100vh;
+    background: linear-gradient(120deg, rgb(5, 127, 158),rgb(92, 102, 124), black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container_login{
+    min-height: 400px;
+    width: 300px;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.nome_login{
+  color: rgb(12, 151, 151); 
+  margin-bottom: 32px;
+}
+
+.login_form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.login_email{
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+}
+
+.input_border{
+    height: 1px;
+    width: 100%;
+    background-color: #bdbbbbcf;
+    margin-bottom: 16px;
+    transition: .3s ease-in;
+}
+
+.login_senha{
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+}
+
+.input_entrar{
+    height: 48px;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(0, 89, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+
+.input_entrar:hover{
+    background-color: rgb(1, 74, 211);
+}
+
+.esqueci_senha{
+   text-decoration: none;
+   color: gray; 
+   margin-bottom: 32px;
+}
+.esqueci_senha:hover{
+    color:rgb(12, 151, 151) ;
+}
+
+.criar_nova_conta{
+    height: 48px;
+    width: 190px;
+    background-color: rgb(80, 65, 94);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.criar_nova_conta:hover{
+    background-color: rgb(73, 59, 85);
+}
