@@ -1,6 +1,18 @@
-const resultado = document.querySelector('.resultado')
+
+//Maneira simplificada de se fazer o mesmo exercicio
+const h1 = document.querySelector('.resultado');
 const data = new Date();
 
+h1.innerHTML = data.toLocaleDateString('pt-BR', {dateStyle: 'full' , });
+
+
+
+
+//armazenando a data em uma variavel e uma div do html
+/*const resultado = document.querySelector('.resultado')
+const data = new Date();
+
+//declarando variaveis que irão armazenar os dados utilizados
 const dia = data.getDate();
 const mes = data.getMonth();
 const ano = data.getFullYear();
@@ -8,12 +20,7 @@ const hora = data.getHours();
 const minutos = data.getMinutes();
 const diaSemana = data.getDay();
 
-function dateCurrent (day,month){
-
-resultado.innerHTML = `${diaSemanaTexto()}, ${dia} de ${mesTexto()} de ${ano} <br>${hora}:${minutos}`
-
-}
-
+//função que ira mostrar o dia da semana em texto
 function diaSemanaTexto(texto){
     let diaSemanaTexto;
     switch(diaSemana){
@@ -43,6 +50,8 @@ function diaSemanaTexto(texto){
     
     return diaSemanaTexto
 }
+
+//função que ira mostrar o mes atual em texto
 function mesTexto(texto){
     let mesTexto;
     switch(mes){
@@ -85,6 +94,10 @@ function mesTexto(texto){
     }
     return mesTexto
 }
-dateCurrent();
+
+//imprimindo o resultado na div do html
+resultado.innerHTML = `${diaSemanaTexto()}, ${dia} de ${mesTexto()} de ${ano} <br>${hora}:${minutos}`
+*/
+
 
 

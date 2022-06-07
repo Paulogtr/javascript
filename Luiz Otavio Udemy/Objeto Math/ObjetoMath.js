@@ -6,5 +6,5 @@ let num1 = 9.49;
 // console.log(Math.max(1,2,3,4,5,-10,-50,1500,9,8,7,6)); (max: retorna o maior numero)
 // console.log(Math.min(1,2,3,4,5,-10,-50,1500,9,8,7,6)); (min: retorna o menor numero)
 
-// const aleatorio = Math.round(Math.random() * (10 - 5) + 5); (round: gera numeros aleatorios)
+// const aleatorio = Math.round(Math.random() * (10 - 5) + 5); (random: gera numeros aleatorios)
 console.log(aleatorio)
