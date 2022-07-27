@@ -1,10 +1,9 @@
-//Função do ES6, que permite criar objetos mais rapidamente
-//Utilizando nomes de variáveis para nomes de propriedades
-
 let rodas = 4;
 let portas = 4;
 let aro = 20;
 let tetoSolar = true;
+
+let t ='tipo_de_'
 
 let carro = {
     rodas,
@@ -12,6 +11,8 @@ let carro = {
     aro,
     tetoSolar,
     bancoDeCouro: true,
+    //parte 3
+    [t+"carro"]: "sedan",
     //podemos iniciar uma function sem precisar escrever function ES6
     ligar(){
         console.log('O carro ligou');
@@ -22,9 +23,15 @@ let carro = {
     }
 };
 
-console.log(carro);
+let barco = {
+    [t+'barco']:'lancha'
+}
 
-console.log(carro.rodas);
+let aviao = {
+    [t+'aviao']:'Boeing'
+}
 
-carro.ligar();
-carro.desligar();
+console.log(carro.tipo_de_carro)
+
+console.log(barco.tipo_de_barco)
+console.log(aviao.tipo_de_aviao)
