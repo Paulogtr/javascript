@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Buscando Produtos com API</title>
+   <style>
+      body {
+         width: 100vw;
+         height: 100vh;
+         text-align: center;
+         margin: auto auto;
+      }
+
+      #resultado_busca {
+         width: 100%;
+         height: 100%;
+         margin-top: 20px;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Realizando busca de produtos com API</h1>
+   <div id="resultado_busca">
+
+   </div>
+
+   <script>
+
+      fetch('https://ranekapi.origamid.dev/json/api/produto')
+         .then(response => response.json())
+         .then(resposta => {
+            console.log(resposta)
+            dados = document.querySelector('#resultado_busca')
+            dados.innerHTML = resposta[1].descricao
+         });
+
+      const data = {
+         id: 'paulo',
+         nome: 'Paulo',
+         email: 'paulo@origamid.com',
+         senha: '1234567',
+         cep: '123456',
+         rua: 'Ali Perto',
+         numero: '230',
+         bairro: 'Botafogo',
+         cidade: 'Rio de Janeiro',
+         estado: 'Rio de Janeiro',
+      }
+
+      fetch('https://ranekapi.origamid.dev/json/api/usuario', {
+         method: 'POST',
+         headers: {
+            'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(data)
+      })
+
+      //Fetch retorna uma promisse.É possivel criarmos funções assíncronas, que irão esperar a promisse resolver, antes de continuar o código
+
+      async function fetchProdutos(url){
+         const response = await fetch(url);
+         const resultadoApi = await response.json()
+         dados = document.querySelector('#resultado_busca')
+         dados.innerHTML += `<p> ${resultadoApi.map(info => info.id += info.preco )}`
+
+      }
+
+      const requisicao = fetchProdutos('https://ranekapi.origamid.dev/json/api/produto')
+
+   </script>
+</body>
+
+</html>
